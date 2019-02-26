@@ -9,7 +9,8 @@
   <div class="collapse navbar-collapse" id="navbarSupportedContent">
     <ul class="navbar-nav mr-auto">
       <li class="nav-item active">
-        <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+  <%= link_to "Home", welcome_index_path, :class =>'dropdown-item'%>
+
       </li>
       <li class="nav-item">
         <a class="nav-link" href="#">Link</a>
@@ -19,8 +20,16 @@
           Dropdown
         </a>
         <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-          <a class="dropdown-item" href="#">Action</a>
-          <a class="dropdown-item" href="#">Another action</a>
+          <%= link_to "sugarloaf", welcome_sugarloaf_path, :class =>'dropdown-item'%>
+
+            <%= link_to "Sugarbush", welcome_sugarbush_path, :class =>'dropdown-item'%>
+
+              <%= link_to "Sunapee", welcome_mountSunapee_path, :class =>'dropdown-item'%>
+                <%= link_to "Mt.Abram", welcome_mountAbram_path, :class =>'dropdown-item'%>
+                  <%= link_to "Wachusett", welcome_wachusettMountain_path, :class =>'dropdown-item'%>
+                    <%= link_to "SundayRiver", welcome_sundayRiver_path, :class =>'dropdown-item'%>
+                      <%= link_to "PatsPeak", welcome_patsPeak_path, :class =>'dropdown-item'%>
+
           <div class="dropdown-divider"></div>
           <a class="dropdown-item" href="#">Something else here</a>
         </div>

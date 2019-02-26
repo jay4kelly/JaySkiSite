@@ -1,2 +1,28 @@
-<h1>Welcome#sugarbush</h1>
-<p>Find me in app/views/welcome/sugarbush.html.erb</p>
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+  <a class="navbar-brand" href="#">Navbar</a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+    <div class="navbar-nav">
+      <%= link_to "Home", welcome_index_path, :class =>'dropdown-item'%>Home <span class="sr-only">(current)</span></a>
+      <a class="nav-item nav-link" href="#">Features</a>
+      <a class="nav-item nav-link" href="#">Pricing</a>
+      <a class="nav-item nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Disabled</a>
+    </div>
+  </div>
+</nav>
+<h1>Sugarbush</h1>
+<h2>Description</h2>
+<p>Sugarbush resort is two mountains right next to eachother. The larger one is named Sugarbush and has two peaks: lincoln peak
+and castlerock. The other mountain is called Mt.Elen. <p>
+<h2> Trail Map </h2>
+
+<%= image_tag("sugarbush-map-201819-winter-72dpi.jpg", :alt => "rss feed") %>
+
+<h2> Conditions </h2>
+<%= image_tag("SugarbushConditions.png", :alt => "rss fed") %>
+<h1>Overview</h1>
+<h2>Trail quality</h2>
+<p> Sugarbush has a wide array of trails for all types of ski and snowboarders. The main trails such as the ones coming off the express quad are perfect for long winding rides down
+  /n There are many winding trails that give the feel of a rollercoaster. Many of these are skiied off past 1 pm. Sugarbush gets enough powder in the more advanced trails after a snowfall.</p>

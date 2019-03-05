@@ -15,3 +15,23 @@
 <p>I've reviewed all the Mountains i've skiied in the U.S. Almost all of them have been in New England </p>
 <br>
 <%=link_to "See whats going on in New England",welcome_newengland_path %>
+<%= link_to 'My Blog', controller: 'reviews' %>
+<%= link_to 'User reviews', controller: 'reviews' %>
+<h1>New Review</h1>
+
+
+<%= form_with scope: :review, url: reviews_path, local: true do |form| %>
+  <p>
+    <%= form.label :title %><br>
+    <%= form.text_field :title %>
+  </p>
+
+  <p>
+    <%= form.label :text %><br>
+    <%= form.text_area :text %>
+  </p>
+
+  <p>
+    <%= form.submit %>
+  </p>
+<% end %>

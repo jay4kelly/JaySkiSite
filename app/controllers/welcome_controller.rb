@@ -1,4 +1,39 @@
 class WelcomeController < ApplicationController
   def index
+    @reviews = Review.all
+
   end
+  def sugarbush
+    SiteVisitor.new
+    SiteVisitor.new.visit_page('sugarbush')
+    trails_open = SiteVisitor.new.print_trails_open
+    @trails = trails_open
+    lifts_open = SiteVisitor.new.print_lifts_open
+    @lifts = lifts_open
+    base_depth = SiteVisitor.new.print_base_depth
+    @base_depth = base_depth
+    summit_depth= SiteVisitor.new.print_summit_depth
+    @summit_depth = summit_depth
+    summit_temp = SiteVisitor.new.print_summit_temp
+    @summit_temp = summit_temp
+    base_temp = SiteVisitor.new.print_base_temp
+    @base_temp = base_temp
+  end
+  def show
+     @review = Review.find(params[:id])
+  end
+    def new
+    end
+
+    def create
+     @review = Review.new(review_params)
+      @review.save
+      redirect_to @review
+    end
+    private
+    def review_params
+      params.require(:review).permit(:title,:text)
+  end
+
+
 end

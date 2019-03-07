@@ -5,19 +5,8 @@ class WelcomeController < ApplicationController
   end
   def sugarbush
   #  SiteVisitor.new
-    SiteVisitor.new.visit_page('sugarbush')
-    trails_open = SiteVisitor.new.print_trails_open
-    @trails = trails_open
-    lifts_open = SiteVisitor.new.print_lifts_open
-    @lifts = lifts_open
-    base_depth = SiteVisitor.new.print_base_depth
-    @base_depth = base_depth
-    summit_depth= SiteVisitor.new.print_summit_depth
-    @summit_depth = summit_depth
-    summit_temp = SiteVisitor.new.print_summit_temp
-    @summit_temp = summit_temp
-    base_temp = SiteVisitor.new.print_base_temp
-    @base_temp = base_temp
+  #  SiteVisitor.new.visit_page('sugarbush')
+  visit_mountain('Sugar bush')
   end
   def wachusettMountain
     SiteVisitor.new.visit_page('wachusett')
@@ -65,81 +54,21 @@ class WelcomeController < ApplicationController
     @base_temp = base_temp
   end
   def blueHillsSkiArea
-    SiteVisitor.new.visit_page('blue hills ski area')
-    trails_open = SiteVisitor.new.print_trails_open
-    @trails = trails_open
-    lifts_open = SiteVisitor.new.print_lifts_open
-    @lifts = lifts_open
-    base_depth = SiteVisitor.new.print_base_depth
-    @base_depth = base_depth
-    summit_depth= SiteVisitor.new.print_summit_depth
-    @summit_depth = summit_depth
-    summit_temp = SiteVisitor.new.print_summit_temp
-    @summit_temp = summit_temp
-    base_temp = SiteVisitor.new.print_base_temp
-    @base_temp = base_temp
+    visit_mountain('blue hills Ski Area')
   end
 
   def sugarloaf
-    SiteVisitor.new.visit_page('sugarloaf')
-
-    trails_open = SiteVisitor.new.print_trails_open
-    @trails = trails_open
-    lifts_open = SiteVisitor.new.print_lifts_open
-    @lifts = lifts_open
-    base_depth = SiteVisitor.new.print_base_depth
-    @base_depth = base_depth
-    summit_depth= SiteVisitor.new.print_summit_depth
-    @summit_depth = summit_depth
-    summit_temp = SiteVisitor.new.print_summit_temp
-    @summit_temp = summit_temp
-    base_temp = SiteVisitor.new.print_base_temp
-    @base_temp = base_temp
+  visit_mountain('sugarloaf')
   end
   def mountSunapee
-    SiteVisitor.new.visit_page('mount sunapee')
-    trails_open = SiteVisitor.new.print_trails_open
-    @trails = trails_open
-    lifts_open = SiteVisitor.new.print_lifts_open
-    @lifts = lifts_open
-    base_depth = SiteVisitor.new.print_base_depth
-    @base_depth = base_depth
-    summit_depth= SiteVisitor.new.print_summit_depth
-    @summit_depth = summit_depth
-    summit_temp = SiteVisitor.new.print_summit_temp
-    @summit_temp = summit_temp
-    base_temp = SiteVisitor.new.print_base_temp
-    @base_temp = base_temp
+    visit_mountain('Mount Sunapee')
   end
   def patsPeak
-    SiteVisitor.new.visit_page('pats peak')
-    trails_open = SiteVisitor.new.print_trails_open
-    @trails = trails_open
-    lifts_open = SiteVisitor.new.print_lifts_open
-    @lifts = lifts_open
-    base_depth = SiteVisitor.new.print_base_depth
-    @base_depth = base_depth
-    summit_depth= SiteVisitor.new.print_summit_depth
-    @summit_depth = summit_depth
-    summit_temp = SiteVisitor.new.print_summit_temp
-    @summit_temp = summit_temp
-    base_temp = SiteVisitor.new.print_base_temp
-    @base_temp = base_temp
+  visit_mountain('Pats peak')
+
   end
   def berkshireEast
-    SiteVisitor.new.visit_page('berkshire east')
-    trails_open = SiteVisitor.new.print_trails_open
-    @trails = trails_open
-    lifts_open = SiteVisitor.new.print_lifts_open
-    @lifts = lifts_open
-    base_depth = SiteVisitor.new.print_base_depth
-    @base_depth = base_depth
-    summit_depth= SiteVisitor.new.print_summit_depth
-    @summit_depth = summit_depth
-    summit_temp = SiteVisitor.new.print_summit_temp
-    @summit_temp = summit_temp
-    base_temp = SiteVisitor.new.print_base_temp
-    @base_temp = base_temp
+    visit_mountain('berkshire east')
   end
   def show
      @review = Review.find(params[:id])
@@ -158,4 +87,13 @@ class WelcomeController < ApplicationController
   end
 
 
+end
+def visit_mountain(mountain_name)
+site_visitor = SiteVisitor.new.visit_page('mount abram')
+@trails = site_visitor.print_trails_open
+@lifts = site_visitor.print_trails_open
+@base_depth = site_visitor.print_base_depth
+@summit_depth = site_visitor.print_summit_depth
+@summit_temp = site_visitor.print_summit_temp
+@base_temp = site_visitor.print_base_temp
 end

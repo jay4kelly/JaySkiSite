@@ -4,7 +4,8 @@ require 'capybara/dsl'
 require 'nokogiri'
 class SiteVisitor
 include Capybara::DSL
-def initialize()
+def initialize(mountain)
+
   # Configurations
 Capybara.register_driver :selenium do |app|
   Capybara::Selenium::Driver.new(app, browser: :chrome)
@@ -17,15 +18,14 @@ end
 # Visit
 browser = Capybara.current_session
 driver = browser.driver.browser
-end
 
-def visit_page(mountain)
-  browser = Capybara.current_session
-  driver = browser.driver.browser
 visit "https://www.google.com"
 find(".RNNXgb").click
-fill_in('q', :with => mountain).native.send_keys(:return)
-sleep(5)
+fill_in('q', :with => @mountain).native.send_keys(:return)
+
+end
+
+
   # Wait browser to load
 
 
@@ -68,7 +68,4 @@ end
 def print_base_temp
   base_temp = find('#uid_0 > div.ifM9O > div:nth-child(2) > div > div > div > div.wo5SM > div:nth-child(2) > div:nth-child(1) > div > table > tbody > tr:nth-child(1) > td:nth-child(3)').text
   return base_temp
-end
-
-
 end

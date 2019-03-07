@@ -88,8 +88,8 @@ class WelcomeController < ApplicationController
 
 
 end
-def visit_mountain(mountain_name)
-site_visitor = SiteVisitor.new.visit_page('mount abram')
+def visit_mountain(mountain)
+site_visitor = SiteVisitor.new.visit_page(mountain)
 @trails = site_visitor.print_trails_open
 @lifts = site_visitor.print_trails_open
 @base_depth = site_visitor.print_base_depth

@@ -5,7 +5,7 @@ require 'nokogiri'
 class SiteVisitor
 include Capybara::DSL
 def initialize(mountain)
-
+@mountain = mountain
   # Configurations
 Capybara.register_driver :selenium do |app|
   Capybara::Selenium::Driver.new(app, browser: :chrome)
@@ -29,7 +29,7 @@ end
   # Wait browser to load
 
 
-end
+
   # Wait browser to load
 
 
@@ -68,4 +68,5 @@ end
 def print_base_temp
   base_temp = find('#uid_0 > div.ifM9O > div:nth-child(2) > div > div > div > div.wo5SM > div:nth-child(2) > div:nth-child(1) > div > table > tbody > tr:nth-child(1) > td:nth-child(3)').text
   return base_temp
+end
 end

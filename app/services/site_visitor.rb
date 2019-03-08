@@ -37,7 +37,8 @@ end
 
 def print_trails_open()
   begin
-  trails_open = find('#uid_0 > div.ifM9O > div:nth-child(2) > div > div > div > div.wo5SM > div:nth-child(1) > div:nth-child(2) > div:nth-child(1) > div.cuG6ob').text
+  trails_open = find('.cuG6ob')[1].text
+  #find('#uid_0 > div.ifM9O > div:nth-child(2) > div > div > div > div.wo5SM > div:nth-child(1) > div:nth-child(2) > div:nth-child(1) > div.cuG6ob').text
 
     #uid_0 > div.ifM9O > div:nth-child(2) > div > div > div > div.wo5SM > div:nth-child(1) > div:nth-child(2) > div:nth-child(1) > div.cuG6ob').text
     #uid_0 > div.ifM9O > div:nth-child(2) > div > div > div > div.wo5SM > div > div.ByaOAe.wdAYCf > div:nth-child(1) > div.cuG6ob').text
@@ -52,7 +53,8 @@ end
 
 def print_lifts_open()
   begin
-  open_lifts = find('#uid_0 > div.ifM9O > div:nth-child(2) > div > div > div > div.wo5SM > div:nth-child(1) > div:nth-child(2) > div:nth-child(2) > div.cuG6ob').text
+  open_lifts = find('.cuG6ob')[2].text
+  #find('#uid_0 > div.ifM9O > div:nth-child(2) > div > div > div > div.wo5SM > div:nth-child(1) > div:nth-child(2) > div:nth-child(2) > div.cuG6ob').text
     #uid_3 > div.ifM9O > div:nth-child(2) > div > div > div > div.wo5SM > div > div.ByaOAe.wdAYCf > div:nth-child(2) > div.cuG6ob').text
     #uid_0 > div.ifM9O > div:nth-child(2) > div > div > div > div.wo5SM > div:nth-child(1) > div:nth-child(2) > div:nth-child(2) > div.cuG6ob').text
     return open_trails

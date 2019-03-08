@@ -19,9 +19,10 @@ end
 browser = Capybara.current_session
 driver = browser.driver.browser
 
-visit "https://www.google.com"
-find(".RNNXgb").click
-fill_in('q', :with => @mountain).native.send_keys(:return)
+#visit "https://www.google.com"
+visit "https://www.google.com/search?q=#{@mountain}"
+#find(".RNNXgb").click
+#fill_in('q', :with => @mountain).native.send_keys(:return)
 sleep(2)
 
 end

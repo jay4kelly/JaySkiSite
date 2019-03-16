@@ -11,7 +11,7 @@ class WelcomeController < ApplicationController
   visit_mountain('Wachusett mountain')
   end
   def mountAbram
-    visit_mountain('Wachusett mountain')
+    visit_mountain('Mount Abram')
   end
   def sundayRiver
     visit_mountain('Sunday River')
@@ -46,11 +46,9 @@ class WelcomeController < ApplicationController
     def review_params
       params.require(:review).permit(:title,:text)
   end
-
-
 end
-def visit_mountain(mountain)
-site_visitor = SiteVisitor.new(mountain)
+def visit_mountain(mountain_name)
+site_visitor = SiteVisitor.new(mountain_name)
 @trails = site_visitor.print_trails_open
 @lifts = site_visitor.print_trails_open
 @base_depth = site_visitor.print_base_depth

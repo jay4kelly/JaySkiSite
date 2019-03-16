@@ -40,3 +40,19 @@ and castlerock. The other mountain is called Mt.Elen. <p>
 <%= @summit_temp %>
 
 <h2> User Reviews</h2>
+<%= form_with scope: :review, url: reviews_path, local: true do |form| %>
+  <p>
+    <%= form.label :title %><br>
+    <%= form.text_field :title %>
+  </p>
+
+  <p>
+    <%= form.label :text %><br>
+    <%= form.text_area :text %>
+  </p>
+
+  <p>
+    <%= form.submit %>
+  </p>
+<% end %>
+<%= link_to 'userReviews', controller: 'reviews' %>

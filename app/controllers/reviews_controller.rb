@@ -3,7 +3,7 @@ def index
   @reviews = Review.all
 end
 def show
-   @review = Review.find(params[:id])
+   @reviews = Review.find(params[:id])
 end
   def new
   end

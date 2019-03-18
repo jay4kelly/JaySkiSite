@@ -9,22 +9,3 @@
   <%= @review.text %>
 </p>
 <%= link_to 'Back', review_path %>
-
-
-<h1>Listing reviews</h1>
-
-<table>
-  <tr>
-    <th>Title</th>
-    <th>Text</th>
-    <th></th>
-  </tr>
-
-  <% @reviews.each do |review| %>
-    <tr>
-      <td><%= review.title %></td>
-      <td><%= review.text %></td>
-      <td><%= link_to 'Show', review_path(review) %></td>
-    </tr>
-  <% end %>
-</table>

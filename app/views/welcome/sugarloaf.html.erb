@@ -27,6 +27,24 @@
   </p>
 
   <p>
+    <%= form.hidden_field :mountain_id, value: @mountain.id %>
     <%= form.submit %>
   </p>
 <% end %>
+
+
+<table>
+  <tr>
+    <th>Title</th>
+    <th>Text</th>
+    <th></th>
+  </tr>
+
+  <% @review.each do |review| %>
+    <tr>
+      <td><%= review.title %></td>
+      <td><%= review.text %></td>
+      <td><%= link_to 'Show', review_path(review) %></td>
+    </tr>
+  <% end %>
+</table>

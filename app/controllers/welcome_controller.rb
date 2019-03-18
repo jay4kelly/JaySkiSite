@@ -6,6 +6,8 @@ class WelcomeController < ApplicationController
   #  SiteVisitor.new
   #  SiteVisitor.new.visit_page('sugarbush')visit_mountain(mountain)
   visit_mountain('Sugarbush')
+  @mountain = Mountain.find_by(name: 'Sugarbush')
+  @review = @mountain.reviews
   end
   def wachusettMountain
   visit_mountain('Wachusett mountain')

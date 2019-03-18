@@ -56,3 +56,19 @@ and castlerock. The other mountain is called Mt.Elen. <p>
   </p>
 <% end %>
 <%= link_to 'show', controller: 'reviews' %>
+
+<table>
+  <tr>
+    <th>Title</th>
+    <th>Text</th>
+    <th></th>
+  </tr>
+
+  <% @reviews.each do |review| %>
+    <tr>
+      <td><%= review.title %></td>
+      <td><%= review.text %></td>
+      <td><%= link_to 'Show', review_path(review) %></td>
+    </tr>
+  <% end %>
+</table>

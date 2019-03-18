@@ -15,15 +15,15 @@ end
   def create
    @review = Review.new(review_params)
     @review.save
-    redirect_to (@review.mountain)
+    redirect_to review_path(@review)
   end
   def destroy
     @review = Review.find(params[:id])
     @review.destroy
-    redirect_to (@review.mountain)
+    redirect_to review_path
   end
   private
   def review_params
-    params.require(:review).permit(:title,:text)
+params.require(:review).permit(:title,:text, :mountain_id)
 end
 end

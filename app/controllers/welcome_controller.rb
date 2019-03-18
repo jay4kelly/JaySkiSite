@@ -50,7 +50,7 @@ end
 def visit_mountain(mountain_name)
 site_visitor = SiteVisitor.new(mountain_name)
 @trails = site_visitor.print_trails_open
-@lifts = site_visitor.print_trails_open
+@lifts = site_visitor.print_lifts_open
 @base_depth = site_visitor.print_base_depth
 @summit_depth = site_visitor.print_summit_depth
 @summit_temp = site_visitor.print_summit_temp

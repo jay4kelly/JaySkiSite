@@ -16,37 +16,37 @@ class WelcomeController < ApplicationController
   end
   def mountAbram
     visit_mountain('Mount Abram')
-    @mountain = Mountain.find_by(name: 'Sugarbush')
+    @mountain = Mountain.find_by(name: 'Mount Abram')
     @review = @mountain.reviews
   end
   def sundayRiver
     visit_mountain('Sunday River')
-    @mountain = Mountain.find_by(name: 'Sugarbush')
+    @mountain = Mountain.find_by(name: 'Sunday River')
     @review = @mountain.reviews
   end
   def blueHillsSkiArea
     visit_mountain('blue hills Ski Area')
-    @mountain = Mountain.find_by(name: 'Sugarbush')
+    @mountain = Mountain.find_by(name: 'Blue Hills')
     @review = @mountain.reviews
   end
   def sugarloaf
   visit_mountain('sugarloaf')
-  @mountain = Mountain.find_by(name: 'Sugarbush')
+  @mountain = Mountain.find_by(name: 'Sugarloaf')
   @review = @mountain.reviews
   end
   def mountSunapee
     visit_mountain('Mount Sunapee')
-    @mountain = Mountain.find_by(name: 'Sugarbush')
+    @mountain = Mountain.find_by(name: 'Sunapee')
     @review = @mountain.reviews
   end
   def patsPeak
   visit_mountain('Pats peak')
-  @mountain = Mountain.find_by(name: 'Sugarbush')
+  @mountain = Mountain.find_by(name: 'Pats Peak')
   @review = @mountain.reviews
   end
   def berkshireEast
     visit_mountain('berkshire east')
-    @mountain = Mountain.find_by(name: 'Sugarbush')
+    @mountain = Mountain.find_by(name: 'Berkshire East')
     @review = @mountain.reviews
   end
   def show

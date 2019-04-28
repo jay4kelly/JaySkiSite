@@ -44,16 +44,29 @@
 </nav>
 <br>
 <div class=”container”>
-<div class="col-sm-8">
+<!-- <div class="col-sm-8"> -->
+  <div class= "container">
 <h1>Sugarbush</h1>
 <h2>Description</h2>
 <p>Sugarbush resort is two mountains right next to eachother. The larger one is named Sugarbush and has two peaks: lincoln peak
 and castlerock. The other mountain is called Mt.Elen. <p>
 
 <h2> Trail Map </h2>
+
+<button type="button" class="btn btn-primary" data-toggle="modal" data-target=".bd-example-modal-lg">View map</button>
+
+<div class="modal fade bd-example-modal-lg" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-lg">
+    <div class="modal-content">
+  <%# <%= image_tag("s", :alt => "rss feed") %> %>
+
+    <%= link_to image_tag("sugarbush-map-201819-winter-72dpi.jpg"), "https://www.sugarbush.com/uploaded/maps/sugarbush-wintertrailguide-1920.pdf"%>
+    </div>
+  </div>
 </div>
-<%= image_tag("sugarbush-map-201819-winter-72dpi.jpg", :alt => "rss feed") %>
-<div class= "container">
+
+
+
 <h2> Conditions </h2>
 
 <h1>Overview</h1>

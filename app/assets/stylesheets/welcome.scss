@@ -2,3 +2,19 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 @import "bootstrap";
+.gradient {
+  background-image:
+    linear-gradient(
+      to right,
+      red,
+      #f06d06,
+      rgb(255, 255, 0),
+      green
+    );
+}
+.container { width: 350px; margin: 100px auto; padding: 20px; background: black; background-color: rgba(0,0,0,0.6); text-align: center; border-radius: 40px;
+}
+body {background: url(‘/home/jay/JaySki/app/assets/images/Splashback.jpg’);
+background-size: cover;
+background-position: center;
+background-attachment: fixed;}

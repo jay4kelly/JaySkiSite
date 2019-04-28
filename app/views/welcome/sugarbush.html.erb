@@ -42,14 +42,18 @@
     </form>
   </div>
 </nav>
+<br>
+<div class=”container”>
+<div class="col-sm-8">
 <h1>Sugarbush</h1>
 <h2>Description</h2>
 <p>Sugarbush resort is two mountains right next to eachother. The larger one is named Sugarbush and has two peaks: lincoln peak
 and castlerock. The other mountain is called Mt.Elen. <p>
+
 <h2> Trail Map </h2>
-
+</div>
 <%= image_tag("sugarbush-map-201819-winter-72dpi.jpg", :alt => "rss feed") %>
-
+<div class= "container">
 <h2> Conditions </h2>
 
 <h1>Overview</h1>
@@ -68,7 +72,8 @@ jThere are many winding trails that give the feel of a rollercoaster. Many of th
 <%= @base_temp %>
 <h3> Summit temperature </h3>
 <%= @summit_temp %>
-
+</div>
+</div>
 <h1> Write a review <h1>
 
 <%= form_with scope: :review, url: reviews_path, local: true do |form| %>
@@ -104,3 +109,4 @@ jThere are many winding trails that give the feel of a rollercoaster. Many of th
     </tr>
   <% end %>
 </table>
+<br />

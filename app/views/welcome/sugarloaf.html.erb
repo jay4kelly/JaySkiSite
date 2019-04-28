@@ -45,6 +45,13 @@
 <h1>Welcome sugarloaf</h1>
 <h2>Description</h2>
 <p>Sugarloaf is a big single peak mountain in maine</p>
+<div class= "container">
+<h2> Conditions </h2>
+
+<h1>Overview</h1>
+<h2>Trail quality</h2>
+<p> Sugarbush has a wide array of trails for all types of ski and snowboarders. The main trails such as the ones coming off the express quad are perfect for long winding rides down
+jThere are many winding trails that give the feel of a rollercoaster. Many of these are skiied off past 1 pm. Sugarbush gets enough powder in the more advanced trails after a snowfall.</p>
 <h3> Trails open </h3>
 <%= @trails %>
 <h3> Lifts open </h3>
@@ -57,6 +64,8 @@
 <%= @base_temp %>
 <h3> Summit temperature </h3>
 <%= @summit_temp %>
+
+
 <h1> Write a review <h1>
 
 <%= form_with scope: :review, url: reviews_path, local: true do |form| %>
@@ -92,3 +101,6 @@
     </tr>
   <% end %>
 </table>
+</div>
+</div>
+<br />

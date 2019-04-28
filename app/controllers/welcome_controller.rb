@@ -21,7 +21,7 @@ class WelcomeController < ApplicationController
   end
   def sundayRiver
     visit_mountain('Sunday River')
-    @mountain = Mountain.find_by(name: 'Sunday River')
+    @mountain = Mountain.find_by(name: 'Sundayriver')
     @review = @mountain.reviews
   end
   def blueHillsSkiArea

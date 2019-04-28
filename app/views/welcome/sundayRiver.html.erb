@@ -42,8 +42,13 @@
     </form>
   </div>
 </nav>
-<h1>Welcome#sundayRiver</h1>
-<p>Find me in app/views/welcome/sundayRiver.html.erb</p>
+<div class= "container">
+<h2> Conditions </h2>
+
+<h1>Overview</h1>
+<h2>Trail quality</h2>
+<p> Sugarbush has a wide array of trails for all types of ski and snowboarders. The main trails such as the ones coming off the express quad are perfect for long winding rides down
+jThere are many winding trails that give the feel of a rollercoaster. Many of these are skiied off past 1 pm. Sugarbush gets enough powder in the more advanced trails after a snowfall.</p>
 <h3> Trails open </h3>
 <%= @trails %>
 <h3> Lifts open </h3>
@@ -57,7 +62,9 @@
 <h3> Summit temperature </h3>
 <%= @summit_temp %>
 
-<h2> User Reviews</h2>
+
+<h1> Write a review <h1>
+
 <%= form_with scope: :review, url: reviews_path, local: true do |form| %>
   <p>
     <%= form.label :title %><br>
@@ -74,7 +81,7 @@
     <%= form.submit %>
   </p>
 <% end %>
-
+<h2> User Reviews</h2>
 
 <table>
   <tr>
@@ -91,3 +98,6 @@
     </tr>
   <% end %>
 </table>
+</div>
+</div>
+<br />

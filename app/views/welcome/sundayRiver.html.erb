@@ -42,13 +42,63 @@
     </form>
   </div>
 </nav>
-<div class= "container">
+<br>
+<div class=”container”>
+<!-- <div class="col-sm-8"> -->
+  <div class= "container">
+<h1>Sugarbush</h1>
+<h2>Description</h2>
+<p>Sugarbush resort is two mountains right next to eachother. The larger one is named Sugarbush and has two peaks: lincoln peak
+and castlerock. The other mountain is called Mt.Elen. <p>
+
+<h2> Trail Map </h2>
+<p>
+  <!-- <a class="btn btn-primary" data-toggle="collapse" href="#multiCollapseExample1" role="button" aria-expanded="false" aria-controls="multiCollapseExample1">Toggle first element</a> -->
+  <!-- <button class="btn btn-primary" type="button" data-toggle="collapse" data-target="#multiCollapseExample2" aria-expanded="false" aria-controls="multiCollapseExample2">Toggle second element</button> -->
+  <button class="btn btn-primary" type="button" data-toggle="collapse" data-target=".multi-collapse" aria-expanded="false" aria-controls="multiCollapseExample1 multiCollapseExample2">View map</button>
+</p>
+<div class="row">
+  <div class="col">
+    <div class="collapse multi-collapse" id="multiCollapseExample1">
+      <div class="card card-body">
+        <button type="button" class="btn btn-primary" data-toggle="modal" data-target=".bd-example-modal-lg">View map on-site</button>
+
+        <div class="modal fade bd-example-modal-lg" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
+          <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+        <%= image_tag("Sunday-River_pistemap.jpg", :alt => "rss feed") %>
+          <%# <%= link_to image_tag("sugarbush-map-201819-winter-72dpi.jpg", :alt => "rss feed", class: "fit_to_size"),"https://www.sugarbush.com/uploaded/maps/sugarbush-wintertrailguide-1920.pdf"%> %>
+
+          <%# .fit_to_size {
+          max-width: 90%;
+          }
+          <%= link_to_image("sugarbush-map-201819-winter-72dpi.jpg", "https://www.sugarbush.com/uploaded/maps/sugarbush-wintertrailguide-1920.pdf") %>
+            <%# <%= link_to image_tag("sugarbush-map-201819-winter-72dpi.jpg"), "https://www.sugarbush.com/uploaded/maps/sugarbush-wintertrailguide-1920.pdf"%> %> %>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="col">
+    <div class="collapse multi-collapse" id="multiCollapseExample2">
+      <div class="card card-body">
+<font size="5">
+        <%=link_to "View map offsite" , "https://www.sundayriver.com/Documents/Sunday%20River/Maps/SundayRiverTrailMap2019_FullRes.png"%>
+</font>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+
 <h2> Conditions </h2>
 
 <h1>Overview</h1>
 <h2>Trail quality</h2>
-<p> Sugarbush has a wide array of trails for all types of ski and snowboarders. The main trails such as the ones coming off the express quad are perfect for long winding rides down
-jThere are many winding trails that give the feel of a rollercoaster. Many of these are skiied off past 1 pm. Sugarbush gets enough powder in the more advanced trails after a snowfall.</p>
+<p> Sunday river</p>
 <h3> Trails open </h3>
 <%= @trails %>
 <h3> Lifts open </h3>
@@ -61,43 +111,99 @@ jThere are many winding trails that give the feel of a rollercoaster. Many of th
 <%= @base_temp %>
 <h3> Summit temperature </h3>
 <%= @summit_temp %>
+<p><br></p>
+
+<!-- Button trigger modal -->
+<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModalCenter">
+  Write a review
+</button>
+<div class = "insideReviews">
+<!-- Modal -->
+<div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLongTitle">Write a review</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
 
 
-<h1> Write a review <h1>
 
-<%= form_with scope: :review, url: reviews_path, local: true do |form| %>
-  <p>
-    <%= form.label :title %><br>
-    <%= form.text_field :title %>
-  </p>
+        <%= form_with scope: :review, url: reviews_path, local: true do |form| %>
+          <p>
+            <%= form.label :title %><br>
+            <%= form.text_area :title ,:cols => "19", :rows => "1" %>
+          </p>
 
-  <p>
-    <%= form.label :text %><br>
-    <%= form.text_area :text %>
-  </p>
+          <p>
+            <%= form.label :text %><br>
+            <%= form.text_area :text %>
+          </p>
 
-  <p>
-    <%= form.hidden_field :mountain_id, value: @mountain.id %>
-    <%= form.submit %>
-  </p>
-<% end %>
-<h2> User Reviews</h2>
+          <p>
+            <%= form.hidden_field :mountain_id, value: @mountain.id %>
+            <%= form.submit %>
+          </p>
+        <% end %>
 
-<table>
-  <tr>
-    <th>Title</th>
-    <th>Text</th>
-    <th></th>
-  </tr>
-
-  <% @review.each do |review| %>
-    <tr>
-      <td><%= review.title %></td>
-      <td><%= review.text %></td>
-      <td><%= link_to 'Show', review_path(review) %></td>
-    </tr>
-  <% end %>
-</table>
+        </div>
+      </div>
+      <!-- <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+        <button type="button" class="btn btn-primary">Save changes</button>
+      </div> -->
+    </div>
+  </div>
 </div>
+
+<p><br></p>
+
+<!-- Button trigger modal -->
+<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModalLong">
+  View user reviews
+</button>
+  <div class = "insideReviews">
+<!-- Modal -->
+<div class="modal fade" id="exampleModalLong" tabindex="-1" role="dialog" aria-labelledby="exampleModalLongTitle" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLongTitle">User reviews</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+
+
+        <table>
+          <tr>
+            <th>Title</th>
+            <th>Text</th>
+            <th></th>
+          </tr>
+
+          <% @review.each do |review| %>
+            <tr>
+              <td><%= review.title %></td>
+              <td><%= review.text %></td>
+              <td><%= link_to 'Show', review_path(review) %></td>
+            </tr>
+          <% end %>
+        </table>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</div>
+    </div>
+  </div>
+</div>
+
+
 </div>
 <br />

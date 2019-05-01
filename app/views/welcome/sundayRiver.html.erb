@@ -19,14 +19,8 @@
         </a>
         <div class="dropdown-menu" aria-labelledby="navbarDropdown">
           <%= link_to "sugarloaf", welcome_sugarloaf_path, :class =>'dropdown-item'%>
-
             <%= link_to "Sugarbush", welcome_sugarbush_path, :class =>'dropdown-item'%>
-
-              <%= link_to "Sunapee", welcome_mountSunapee_path, :class =>'dropdown-item'%>
-                <%= link_to "Mt.Abram", welcome_mountAbram_path, :class =>'dropdown-item'%>
-                  <%= link_to "Wachusett", welcome_wachusettMountain_path, :class =>'dropdown-item'%>
                     <%= link_to "SundayRiver", welcome_sundayRiver_path, :class =>'dropdown-item'%>
-                      <%= link_to "PatsPeak", welcome_patsPeak_path, :class =>'dropdown-item'%>
 
           <div class="dropdown-divider"></div>
           <a class="dropdown-item" href="#">Something else here</a>
@@ -46,10 +40,9 @@
 <div class=”container”>
 <!-- <div class="col-sm-8"> -->
   <div class= "container">
-<h1>Sugarbush</h1>
+<h1>Sunday River</h1>
 <h2>Description</h2>
-<p>Sugarbush resort is two mountains right next to eachother. The larger one is named Sugarbush and has two peaks: lincoln peak
-and castlerock. The other mountain is called Mt.Elen. <p>
+<p>Sunday River is. <p>
 
 <h2> Trail Map </h2>
 <p>
@@ -190,7 +183,7 @@ and castlerock. The other mountain is called Mt.Elen. <p>
             <tr>
               <td><%= review.title %></td>
               <td><%= review.text %></td>
-              <td><%= link_to 'Show', review_path(review) %></td>
+              <!-- <td><%= link_to 'Show', review_path(review) %></td> -->
             </tr>
           <% end %>
         </table>

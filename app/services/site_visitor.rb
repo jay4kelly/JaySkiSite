@@ -22,7 +22,7 @@ driver = browser.driver.browser
 visit "http://www.google.com/search?q=#{@mountain_name}"
 #find(".RNNXgb").click
 #fill_in('q', :with => @mountain).native.send_keys(:return)
-sleep(1)
+sleep(2)
 end
 
 def print_trails_open()
@@ -37,24 +37,30 @@ def print_lifts_open()
     #uid_3 > div.ifM9O > div:nth-child(2) > div > div > div > div.wo5SM > div > div.ByaOAe.wdAYCf > div:nth-child(2) > div.cuG6ob').text
     #uid_0 > div.ifM9O > div:nth-child(2) > div > div > div > div.wo5SM > div:nth-child(1) > div:nth-child(2) > div:nth-child(2) > div.cuG6ob').text
   end
+  def print_base_depth()
+  return  all('.cuG6ob')[3].try(&:text) || "An error has occured"
+
+  #return all('#uid_0 > div.ifM9O > div:nth-child(2) > div > div > div > div.wo5SM > div:nth-child(2) > div:nth-child(1) > div > table > tbody > tr:nth-child(1) > td:nth-child(1)').try(&:text) || "an error has occured"
+
+  end
+  def print_base_temp
+  return  all('.cuG6ob')[4].try(&:text)|| "An error has occured"
+
+
+  end
 def print_summit_depth()
 #depthBaseSummit = find('div.ByaOAe DNjjCd NuspYb').text
-return  all('.cuG6ob')[5].try(&:text)
+return  all('.cuG6ob')[5].try(&:text) || "An error has occured"
+
 #all('#uid_0 > div.ifM9O > div:nth-child(2) > div > div > div > div.wo5SM > div:nth-child(2) > div:nth-child(1) > div > table > tbody > tr:nth-child(1) > td:nth-child(1)').try(&:text) || "an error has occured"
 
 end
 
-def print_base_depth()
-return  all('.cuG6ob')[3].try(&:text)
-#return all('#uid_0 > div.ifM9O > div:nth-child(2) > div > div > div > div.wo5SM > div:nth-child(2) > div:nth-child(1) > div > table > tbody > tr:nth-child(1) > td:nth-child(1)').try(&:text) || "an error has occured"
 
-end
 def print_summit_temp
-return  all('.cuG6ob')[6].try(&:text)
+return  all('.cuG6ob')[6].try(&:text) || "An error has occured"
+
 #return all('#uid_0 > div.ifM9O > div:nth-child(2) > div > div > div > div.wo5SM > div:nth-child(2) > div:nth-child(2) > div > table > tbody > tr:nth-child(1) > td:nth-child(3)').try(&:text) || "An error has occured"
 end
-def print_base_temp
-return  all('.cuG6ob')[4].try(&:text)
 
-end
 end

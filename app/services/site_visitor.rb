@@ -12,7 +12,7 @@ Capybara.register_driver :selenium do |app|
 end
 Capybara.javascript_driver = :chrome
 Capybara.configure do |config|
-  config.default_max_wait_time = 10 # seconds
+  config.default_max_wait_time = 1 #seconds
   config.default_driver = :selenium
 end
 # Visit
@@ -22,9 +22,12 @@ driver = browser.driver.browser
 begin
 #RestClient::Request.execute(:method => visit :get, :url => "http://www.google.com/search?q=#{@mountain_name}", :timeout => 10, :open_timeout => 10)
 visit "http://www.google.com/search?q=#{@mountain_name}"
-wait = Selenium::WebDriver::Wait.new(:timeout => 5)
+#wait = Selenium::WebDriver::Wait.new(:timeout => 5)
 #find(".RNNXgb").click
 #fill_in('q', :with => @mountain).native.send_keys(:return)
+#initialize(args) ⇒ Request
+#resource = RestClient::Resource.new("http://www.google.com/search?q=#{@mountain_name}", timeout: 1 )
+#response = resource.get
 sleep(2)
 rescue Net::HTTPBadResponse
     false
@@ -33,9 +36,9 @@ end
 
 
 def print_trails_open()
-  wait = Selenium::WebDriver::Wait.new(:timeout => 5)
-  trails = wait.until{all('.cuG6ob')[1].try(&:text) || "An error has occured"}
-  return trails
+
+  return all('.cuG6ob')[1].try(&:text) || "An error has occured"
+
 end
 
 def print_lifts_open()

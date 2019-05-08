@@ -34,7 +34,6 @@ rescue Net::HTTPBadResponse
 end
 end
 
-
 def print_trails_open()
 
   return all('.cuG6ob')[1].try(&:text) || "An error has occured"
@@ -42,34 +41,39 @@ def print_trails_open()
 end
 
 def print_lifts_open()
-  wait = Selenium::WebDriver::Wait.new(:timeout => 5)
-  lifts = wait.until{all('.cuG6ob')[2].try(&:text) || "An error has occured"}
-  return lifts
+  return all('.cuG6ob')[2].try(&:text) || "An error has occured"
+  # wait = Selenium::WebDriver::Wait.new(:timeout => 5)
+  # lifts = wait.until{all('.cuG6ob')[2].try(&:text) || "An error has occured"}
+  # return lifts
   #return all('.cuG6ob')[2].try(&:text) || "An error has occured"
   #find('#uid_0 > div.ifM9O > div:nth-child(2) > div > div > div > div.wo5SM > div:nth-child(1) > div:nth-child(2) > div:nth-child(2) > div.cuG6ob').text
     #uid_3 > div.ifM9O > div:nth-child(2) > div > div > div > div.wo5SM > div > div.ByaOAe.wdAYCf > div:nth-child(2) > div.cuG6ob').text
     #uid_0 > div.ifM9O > div:nth-child(2) > div > div > div > div.wo5SM > div:nth-child(1) > div:nth-child(2) > div:nth-child(2) > div.cuG6ob').text
   end
   def print_base_depth()
-    wait = Selenium::WebDriver::Wait.new(:timeout => 5)
-    basedepth = wait.until{all('.cuG6ob')[3].try(&:text) || "An error has occured"}
-    return basedepth
+    return all('.cuG6ob')[3].try(&:text) || "An error has occured"
+
+    # wait = Selenium::WebDriver::Wait.new(:timeout => 5)
+    # basedepth = wait.until{all('.cuG6ob')[3].try(&:text) || "An error has occured"}
+    # return basedepth
   #return  all('.cuG6ob')[3].try(&:text) || "An error has occured"
 
   #return all('#uid_0 > div.ifM9O > div:nth-child(2) > div > div > div > div.wo5SM > div:nth-child(2) > div:nth-child(1) > div > table > tbody > tr:nth-child(1) > td:nth-child(1)').try(&:text) || "an error has occured"
   end
   def print_base_temp()
-    wait = Selenium::WebDriver::Wait.new(:timeout => 5)
-    basetemp = wait.until{all('.cuG6ob')[4].try(&:text) || "An error has occured"}
-    return basetemp
+    return all('.cuG6ob')[4].try(&:text) || "An error has occured"
+    # wait = Selenium::WebDriver::Wait.new(:timeout => 5)
+    # basetemp = wait.until{all('.cuG6ob')[4].try(&:text) || "An error has occured"}
+    # return basetemp
   #return  all('.cuG6ob')[4].try(&:text)|| "An error has occured"
 
   end
 def print_summit_depth()
-  wait = Selenium::WebDriver::Wait.new(:timeout => 5)
+  return all('.cuG6ob')[5].try(&:text) || "An error has occured"
+#  wait = Selenium::WebDriver::Wait.new(:timeout => 5)
 #depthBaseSummit = find('div.ByaOAe DNjjCd NuspYb').text
-summitdepth= wait.until{all('.cuG6ob')[5].try(&:text) || "An error has occured"}
-return summitdepth
+# summitdepth= wait.until{all('.cuG6ob')[5].try(&:text) || "An error has occured"}
+# return summitdepth
 #return  all('.cuG6ob')[5].try(&:text) || "An error has occured"
 
 #all('#uid_0 > div.ifM9O > div:nth-child(2) > div > div > div > div.wo5SM > div:nth-child(2) > div:nth-child(1) > div > table > tbody > tr:nth-child(1) > td:nth-child(1)').try(&:text) || "an error has occured"
@@ -78,11 +82,11 @@ end
 
 
 def print_summit_temp()
-  wait = Selenium::WebDriver::Wait.new(:timeout => 5)
-  summittemp = wait.until{all('.cuG6ob')[6].try(&:text) || "An error has occured"}
-  return summittemp
+  return all('.cuG6ob')[6].try(&:text) || "An error has occured"
+  # wait = Selenium::WebDriver::Wait.new(:timeout => 5)
+  # summittemp = wait.until{all('.cuG6ob')[6].try(&:text) || "An error has occured"}
+  # return summittemp
 #return  all('.cuG6ob')[6].try(&:text) || "An error has occured"
-
 #return all('#uid_0 > div.ifM9O > div:nth-child(2) > div > div > div > div.wo5SM > div:nth-child(2) > div:nth-child(2) > div > table > tbody > tr:nth-child(1) > td:nth-child(3)').try(&:text) || "An error has occured"
 end
 

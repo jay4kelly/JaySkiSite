@@ -1,24 +1,5 @@
-# README
+# Alpine Skiing Site
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+For my Senior Capstone project I created a web site to provide skiing information about ski areas in the New England area. The site also allows users to post their own ski reviews.
 
-Things you may want to cover:
-
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+## Technologies Utilized

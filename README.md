@@ -2,6 +2,12 @@
 
 For my Senior Capstone project I created a web site to provide skiing information about ski areas in the New England area. The site also allows users to post their own ski reviews.
 
+## Features
+
+- Provide list of US Eastern Ski Mountains
+- Live mountain statistics for each mountain
+- Ability to post and view reviews
+
 ## Technologies Utilized
 
 - Ruby on Rails - web application framework
